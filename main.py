@@ -8,6 +8,11 @@ app = Flask(__name__)
 def index():
     return send_file('src/index.html')
 
+@app.route("/second_page.html")
+def second_page():
+ return send_file('src/second_page.html')
+
+
 def main():
     app.run(port=int(os.environ.get('PORT', 80)))
 
